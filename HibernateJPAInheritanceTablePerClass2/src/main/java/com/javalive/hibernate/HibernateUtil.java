@@ -15,7 +15,14 @@ import com.javalive.entity.CreditAccount;
 import com.javalive.entity.DebitAccount;
 
 /**
- * 
+ * In a Table per class inheritance strategy, each concrete subclass has its own
+ * table containing both the subclass and the base class properties. If you
+ * don’t need polymorphic queries or relationships, the table per class strategy
+ * is most likely the best fit. It allows you to use constraints to ensure data
+ * consistency and provides an option of polymorphic queries. But keep in mind,
+ * that polymorphic queries are very complex for this table structure and that
+ * you should avoid them. 
+ * Example:Use @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
  */
 public class HibernateUtil {
 
